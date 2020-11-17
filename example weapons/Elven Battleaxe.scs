@@ -1,0 +1,9 @@
+concept_elven_battleaxe
+=> nrel_main_idtf: [Эльфийская секира] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Elven Battleaxe] (* <- lang_en;; *);
+
+<= nrel_inclusion: concept_skyrim_weapon_two_handed;
+<= nrel_inclusion: concept_skyrim_weapon_two_handed_poleaxe;
+
+=> nrel_weight: [24];
+=> nrel_default_cost: [520];; 

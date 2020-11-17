@@ -1,0 +1,9 @@
+concept_stalhrim_war_axe
+=> nrel_main_idtf: [Сталгримовый боевой топор] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Stalhrim War Axe] (* <- lang_en;; *);
+
+<= nrel_inclusion: concept_skyrim_weapon_one_handed;
+<= nrel_inclusion: concept_skyrim_weapon_one_handed_axe;
+
+=> nrel_weight: [16];
+=> nrel_default_cost: [1180];;

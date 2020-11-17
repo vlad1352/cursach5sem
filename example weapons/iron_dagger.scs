@@ -1,0 +1,9 @@
+concept_iron_dagger
+=> nrel_main_idtf: [железный кинжал] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Iron dagger] (* <- lang_en;; *);
+
+<= nrel_inclusion: concept_skyrim_weapon_one_handed;
+<= nrel_inclusion: concept_skyrim_weapon_one_handed_knife;
+
+=> nrel_weight: [2];
+=> nrel_default_cost: [10];; 

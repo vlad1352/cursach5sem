@@ -1,0 +1,9 @@
+concept_staff_of_inspiration
+=> nrel_main_idtf: [Посох успокоения] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Staff of Inspiration] (* <- lang_en;; *);
+
+<= nrel_inclusion: concept_skyrim_weapon_staff;
+<= nrel_inclusion: concept_skyrim_weapon_staff_illusion;
+
+=> nrel_weight: [8];
+=> nrel_default_cost: [317];; 

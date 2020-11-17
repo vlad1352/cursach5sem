@@ -1,0 +1,8 @@
+concept_falmer_bow
+=> nrel_main_idtf: [Фалмерский лук] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Falmer Bow] (* <- lang_en;; *);
+
+<= nrel_inclusion: concept_skyrim_weapon_rifle;
+
+=> nrel_weight: [15];
+=> nrel_default_cost: [135];; 

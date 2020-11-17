@@ -1,0 +1,9 @@
+concept_orcish_warhammer
+=> nrel_main_idtf: [Орочий боевой молот] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Orcish Warhammer] (* <- lang_en;; *);
+
+<= nrel_inclusion: concept_skyrim_weapon_two_handed;
+<= nrel_inclusion: concept_skyrim_weapon_two_handed_hummer;
+
+=> nrel_weight: [26];
+=> nrel_default_cost: [180];; 
