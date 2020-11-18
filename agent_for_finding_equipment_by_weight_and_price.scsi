@@ -77,7 +77,20 @@ scp_program -> agent_for_finding_equipment_by_weight_and_price
 						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
 						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_value ;;
 
-						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator7 ;;
+						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator6A ;;
+						=> nrel_else: ..agent_for_finding_equipment_by_weight_and_price_operator_return ;;
+					*);;
+				-> ..agent_for_finding_equipment_by_weight_and_price_operator6A
+					(*
+						<- searchElStr5 ;;
+		
+						-> rrel_1: rrel_fixed: rrel_scp_var: _param ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+						-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _game_weight ;;
+						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_weight ;;
+
+						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator7;;
 						=> nrel_else: ..agent_for_finding_equipment_by_weight_and_price_operator_return ;;
 					*);;
 				-> ..agent_for_finding_equipment_by_weight_and_price_operator7
@@ -187,9 +200,45 @@ scp_program -> agent_for_finding_equipment_by_weight_and_price
 						-> rrel_1: rrel_fixed: rrel_scp_var: _game_currency_value ;;
 						-> rrel_2: rrel_fixed: rrel_scp_var: _price ;;
 
+						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator15C ;;
+						=> nrel_else: ..agent_for_finding_equipment_by_weight_and_price_operator12 ;;
+					*);;
+
+				-> ..agent_for_finding_equipment_by_weight_and_price_operator15C
+					(*
+						<- searchElStr5 ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: _weapon ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+						-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _weight ;;
+						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_weight ;;
+
+						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator15D;;
+						=> nrel_else: ..agent_for_finding_equipment_by_weight_and_price_operator12 ;;
+					*);;
+
+				-> ..agent_for_finding_equipment_by_weight_and_price_operator15D
+					(*
+						<- ifEq ;;
+		
+						-> rrel_1: rrel_fixed: rrel_scp_var: _game_weight ;;
+						-> rrel_2: rrel_fixed: rrel_scp_var: _weight ;;
+
+						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator16 ;;
+						=> nrel_else: ..agent_for_finding_equipment_by_weight_and_price_operator15F ;;
+					*);;
+				-> ..agent_for_finding_equipment_by_weight_and_price_operator15F
+					(*
+						<- ifGr ;;
+		
+						-> rrel_1: rrel_fixed: rrel_scp_var: _game_weight ;;
+						-> rrel_2: rrel_fixed: rrel_scp_var: _weight ;;
+
 						=> nrel_then: ..agent_for_finding_equipment_by_weight_and_price_operator16 ;;
 						=> nrel_else: ..agent_for_finding_equipment_by_weight_and_price_operator12 ;;
 					*);;
+
 				-> ..agent_for_finding_equipment_by_weight_and_price_operator16
 					(*
 						<- contAdd ;;
