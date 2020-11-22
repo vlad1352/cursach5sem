@@ -37,7 +37,8 @@ sc_agent_for_finding_equipment_by_weight_and_price
 	question_finding_equipment_by_weight_and_price _-> .._question;;
 	question_initiated _-> .._question;;
 	question _-> .._question;;
-	.._question _-> .._parameter;;
+	.._question _-> rrel_1:: .._param1;;
+	.._question _-> rrel_2:: .._param2;;
 *];;
 
 ..sc_agent_for_finding_equipment_by_weight_and_price_result
@@ -46,5 +47,6 @@ sc_agent_for_finding_equipment_by_weight_and_price
 	question_finished _-> .._question;;
 	question _-> .._question;;
 	.._question _=> nrel_answer:: .._answer;;
-	.._question _-> .._parameter;;
+	.._question _-> rrel_1:: .._param1;;
+	.._question _-> rrel_2:: .._param2;;
 *];;
