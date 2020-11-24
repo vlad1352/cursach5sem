@@ -1,0 +1,232 @@
+scp_program -> proc_finding_equipment_by_price
+(*	
+	-> rrel_params: ... 
+	(*
+
+		-> rrel_1: rrel_in: _game_currency_value;;
+		-> rrel_2: rrel_out: _answer;;
+	*);;
+	-> rrel_operators: ...
+	(*
+		-> rrel_init: ..proc_finding_equipment_by_price_operator1
+			(*
+				<- searchSetStr5 ;;
+	
+				-> rrel_1: rrel_fixed: rrel_scp_const: concept_skyrim_weapon ;;
+				-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+				-> rrel_3: rrel_assign: rrel_scp_var: _types ;;
+				-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+				-> rrel_5: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+				-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_types ;;
+
+				=> nrel_then: ..proc_finding_equipment_by_price_operator2 ;;
+				=> nrel_else: ..proc_finding_equipment_by_price_operator_return ;;
+			*);;
+		-> ..proc_finding_equipment_by_price_operator2
+					(*
+						<- searchElStr3 ;;
+					
+						-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_types ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1 ;;
+						-> rrel_3: rrel_assign: rrel_scp_var: _type ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator3 ;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator18 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator3
+					(*
+						<- eraseEl ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1 ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator4 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator4
+					(*
+						<- contAssign;; 
+					
+						-> rrel_1: rrel_assign: rrel_scp_var: rrel_link: _count ;;
+						-> rrel_2: rrel_fixed: rrel_scp_const: [0] ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator5 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator5
+					(*
+						<- searchSetStr5 ;;
+	
+						-> rrel_1: rrel_fixed: rrel_scp_var: _type ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+						-> rrel_3: rrel_assign: rrel_scp_var: _weapons ;;
+						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+						-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_weapons ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator6 ;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator2 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator6
+					(*
+						<- searchElStr3 ;;
+					
+						-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_weapons ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_3: rrel_assign: rrel_scp_var: _weapon ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator7 ;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator14 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator7
+					(*
+						<- eraseEl ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator8 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator8
+					(*
+						<- searchElStr5 ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: _weapon ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+						-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _price ;;
+						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_default_cost ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator9;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator6 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator9
+					(*
+						<- ifEq ;;
+		
+						-> rrel_1: rrel_fixed: rrel_scp_var: _game_currency_value ;;
+						-> rrel_2: rrel_fixed: rrel_scp_var: _price ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator11 ;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator10 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator10
+					(*
+						<- ifGr ;;
+		
+						-> rrel_1: rrel_fixed: rrel_scp_var: _game_currency_value ;;
+						-> rrel_2: rrel_fixed: rrel_scp_var: _price ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator11 ;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator6 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator11
+					(*
+						<- contAdd ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: _count ;;
+						-> rrel_2: rrel_fixed: rrel_scp_var: _count ;;
+						-> rrel_3: rrel_fixed: rrel_scp_const: [1] ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator12 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator12
+					(*
+						<- searchSetStr5 ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: _type ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com2 ;;
+						-> rrel_3: rrel_fixed: rrel_scp_var: _weapon ;;
+						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3 ;;
+						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+						-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer ;;
+						-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator13 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator13
+					(*
+						<- genElStr3 ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_3: rrel_fixed: rrel_scp_var: _weapon ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator6 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator14
+					(*
+						<- ifGr ;;
+	
+						-> rrel_1: rrel_fixed: rrel_scp_var: _count ;;
+						-> rrel_2: rrel_fixed: rrel_scp_const: [0] ;;
+
+						=> nrel_then: ..proc_finding_equipment_by_price_operator15 ;;
+						=> nrel_else: ..proc_finding_equipment_by_price_operator2 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator15
+					(*
+						<- searchSetStr5 ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_const: concept_skyrim_weapon ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _com ;;
+						-> rrel_3: rrel_fixed: rrel_scp_var: _type ;;
+						-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_5: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+
+						-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer ;;
+						-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator16 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator16
+					(*
+						<- genElStr3 ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_3: rrel_fixed: rrel_scp_var: _type ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator2 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator17
+					(*
+						<- genElStr3 ;;
+				
+						-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_3: rrel_fixed: rrel_scp_const: concept_skyrim_weapon ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator18 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator18
+					(*
+						<- genElStr3 ;;
+				
+						-> rrel_1: rrel_fixed: rrel_scp_var: _answer ;;
+						-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc ;;
+						-> rrel_3: rrel_fixed: rrel_scp_const: nrel_inclusion ;;
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator_errase ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator_errase
+					(*
+						<- eraseEl ;;
+								 
+						-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_types ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator_errase2 ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator_errase2
+					(*
+						<- eraseEl ;;
+
+						-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_weapons ;;
+
+						=> nrel_goto: ..proc_finding_equipment_by_price_operator_return ;;
+					*);;
+		-> ..proc_finding_equipment_by_price_operator_return
+					(*
+						<- return;;
+					*);;
+	*);;
+*);;
+

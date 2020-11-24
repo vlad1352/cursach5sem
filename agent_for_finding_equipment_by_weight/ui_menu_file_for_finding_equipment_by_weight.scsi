@@ -1,0 +1,20 @@
+ui_menu_file_for_finding_equipment_by_weight
+	<- 	ui_user_command_class_atom; 
+		ui_user_command_class_view_kb;
+	=> nrel_main_idtf: 
+		[Найти доступное снаряжение по весу (Скайрим)](* <- lang_ru;; *);
+		[Find equipment by weight (Skyrim)] (* <- lang_en;; *);
+	=> ui_nrel_command_template:
+		[*
+		question_finding_equipment_by_weight _-> ._question_finding_equipment_by_weight_instance
+			(*
+			_-> ui_arg_1;;
+			*);;
+		._question_finding_equipment_by_weight_instance _<- question;;
+		*];
+	=> ui_nrel_command_lang_template: 
+		[Запрос поиска снаряжение, весом до $ui_arg_1] 
+		(* <- lang_ru;; *);
+		[Request of finding equipment by weight below $ui_arg_1] 
+		(* <- lang_en;; *);;
+
