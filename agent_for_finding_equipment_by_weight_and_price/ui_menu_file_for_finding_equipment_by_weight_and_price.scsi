@@ -1,8 +1,8 @@
 ui_menu_file_for_finding_equipment_by_weight_and_price <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_two_argument_command_class;
 
 	=> nrel_main_idtf: 
-		[Найти снаряжение по цене и весу](* <- lang_ru;; *);
-		[Find equipment by weight and price](* <- lang_en;; *);
+		[Найти снаряжение по цене и весу (Скайрим)](* <- lang_ru;; *);
+		[Find equipment by weight and price (Skyrim)](* <- lang_en;; *);
 
 	=> ui_nrel_command_template:
 		[*
