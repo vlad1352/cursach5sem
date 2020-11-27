@@ -1,0 +1,12 @@
+concept_skyrim_shop
+=> nrel_main_idtf: [Лавка (Скайрим)] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Shop (Skyrim)] (* <- lang_en;; *);
+
+=> nrel_inclusion: concept_skyrim_weapon_one_handed;
+=> nrel_inclusion: concept_skyrim_weapon_rifle;
+=> nrel_inclusion: concept_skyrim_weapon_staff;
+=> nrel_inclusion: concept_skyrim_weapon_two_handed;
+=> nrel_inclusion: concept_skyrim_armor_boots;
+=> nrel_inclusion: concept_skyrim_armor_bracers;
+=> nrel_inclusion: concept_skyrim_armor_cuirass;
+=> nrel_inclusion: concept_skyrim_armor_helmet;;
